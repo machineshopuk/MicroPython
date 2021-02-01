@@ -18,7 +18,7 @@ tof.begin() #start the rof sensor
 
 while True:
     t = 0 #reset the average accumulator
-    for i in range(0, 4): #for loop creates an average value over 5 samples
+    for i in range(0, 5): #for loop creates an average value over 5 samples
         tof.takeMeasurement() #trigger the measurement
         t = t + tof.getDistance() #collect the measurement and add it to the accumulator
     t = t * 0.2 #divide the accumulator by 5
